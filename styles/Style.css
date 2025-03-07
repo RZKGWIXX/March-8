@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #da7c8a, #f47f92);
+    background: linear-gradient(135deg, #FFB6C1, #FFC0CB);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
@@ -76,7 +76,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: rgb(237, 142, 158);
+    background: rgb(226, 142, 156);
     border-radius: 50%;
     transform: scale(0);
     animation: petalGrow 1.5s forwards;

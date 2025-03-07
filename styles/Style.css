@@ -76,7 +76,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: pink;
+    background: rgb(226, 142, 156);
     border-radius: 50%;
     transform: scale(0);
     animation: petalGrow 1.5s forwards;

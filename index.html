@@ -1,81 +1,91 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Привітання з 8 Березня</title>
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Павло Полуботок</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <!-- Контейнер для випадкових квітів -->
-  <div id="background"></div>
-
-  <!-- Контейнер для основного контенту -->
-  <div class="content">
-    <h1>Зі святом 8 Березня!</h1>
-    <p>Бажаємо ніжності, краси та нескінченної радості у цей особливий день!</p>
-    <button id="heartButton">НАЖМИ</button>
-  </div>
-
-  <!-- Контейнер для літаючих сердечок -->
-  <div id="heartContainer"></div>
-
-  <script>
-    // Функція для створення квітки з випадковим розташуванням та затримкою анімації
-    function createFlower() {
-      const flower = document.createElement("div");
-      flower.className = "flower";
-      flower.style.top = Math.random() * 90 + "vh";
-      flower.style.left = Math.random() * 90 + "vw";
-      const delay = Math.random() * 3;
-      flower.style.animationDelay = delay + "s";
-      
-      // Пелюстки
-      const petals = document.createElement("div");
-      petals.className = "petals";
-      for (let i = 1; i <= 4; i++) {
-        const petal = document.createElement("div");
-        petal.className = "petal petal" + i;
-        petal.style.animationDelay = delay + "s";
-        petals.appendChild(petal);
-      }
-      flower.appendChild(petals);
-      
-      // Центр квітки
-      const center = document.createElement("div");
-      center.className = "center";
-      center.style.animationDelay = delay + "s";
-      flower.appendChild(center);
-      
-      // Стебло квітки
-      const stem = document.createElement("div");
-      stem.className = "stem";
-      stem.style.animationDelay = delay + "s";
-      flower.appendChild(stem);
-      
-      return flower;
-    }
-    
-    // Генеруємо квіти при завантаженні сторінки
-    window.addEventListener("load", function() {
-      const bg = document.getElementById("background");
-      for (let i = 0; i < 7; i++) {
-        bg.appendChild(createFlower());
-      }
-    });
-    
-    // При натисканні кнопки спавнюється 10 сердечок із випадковими позиціями
-    document.getElementById("heartButton").addEventListener("click", function() {
-      for (let i = 0; i < 10; i++) {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        // Випадкова позиція по горизонталі та вертикалі
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.bottom = Math.random() * 30 + "vh";
-        document.getElementById("heartContainer").appendChild(heart);
-        setTimeout(() => heart.remove(), 3000); // видалення після 3 секунд
-      }
-    });
-  </script>
+    <header>
+        <div class="header-left">
+            <i class="fas fa-camera"></i>
+            <span>Instagram</span>
+        </div>
+        <div class="header-center">
+            <input type="text" placeholder="Пошук">
+        </div>
+        <div class="header-right">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-paper-plane"></i>
+            <i class="fas fa-compass"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </header>
+    <section class="profile">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="Аватарка.jpeg" alt="Павло Полуботок">
+            </div>
+            <div class="profile-info">
+                <h1>pavlo_polybotok</h1>
+                <button class="follow-button">Підписатися</button>
+                <button class="message-button">Написати</button>
+            </div>
+        </div>
+        <div class="profile-stats">
+            <span><strong>3</strong> пости</span>
+            <span><strong>1724</strong> підписники</span>
+            <span><strong>6</strong> підписки</span>
+        </div>
+        <div class="bio">
+            <h2>Павло Полуботок</h2>
+            <p>Народження: ~1660</p>
+            <p>Наказний гетьман Лівобережної України (1722–1724)</p>
+            <p>Смерть: 29.12.1724</p>
+            <p>«Я ворогів не мав і не маю...»</p>
+        </div>
+    </section>
+    <section class="posts">
+        <div class="grid">
+            <div class="post">
+                <a href="post1.html">
+                    <img src="Post1.jpg" alt="Про діяльність">
+                    <div class="post-overlay">
+                        <i class="fas fa-heart"></i> 25
+                        <i class="fas fa-comment"></i> 10
+                    </div>
+                </a>
+            </div>
+            <div class="post">
+                <a href="post2.html">
+                    <img src="Post2.jpg" alt="Лист нащадкам">
+                    <div class="post-overlay">
+                        <i class="fas fa-heart"></i> 30
+                        <i class="fas fa-comment"></i> 15
+                    </div>
+                </a>
+            </div>
+            <div class="post">
+                <a href="post3.html">
+                    <img src="Аватарка.jpeg" alt="Що не вдалося">
+                    <div class="post-overlay">
+                        <i class="fas fa-heart"></i> 20
+                        <i class="fas fa-comment"></i> 8
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Допомога</a></li>
+            <li><a href="#">Конфіденційність</a></li>
+        </ul>
+        <p>© 2025 Instagram Meta</p>
+    </footer>
 </body>
 </html>

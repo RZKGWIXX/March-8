@@ -1,0 +1,188 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.header-left i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.header-left span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-center input {
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+
+.header-right i {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.profile {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 935px;
+    border: 1px solid #dbdbdb;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #dbdbdb;
+    margin-right: 40px;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.follow-button, .message-button {
+    padding: 5px 15px;
+    margin: 10px 10px 0 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background-color: #0095f6;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.profile-stats {
+    margin: 20px 0;
+}
+
+.profile-stats span {
+    margin-right: 40px;
+    font-size: 16px;
+}
+
+.bio h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.posts {
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.post {
+    position: relative;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #dbdbdb;
+}
+
+.post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.post:hover .post-overlay {
+    opacity: 1;
+}
+
+.post-overlay i {
+    margin: 0 10px;
+}
+
+.post-content {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+}
+
+.post-content img {
+    width: 100%;
+    height: auto;
+}
+
+.post-actions {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.post-actions i {
+    margin-right: 15px;
+}
+
+.post-content p {
+    margin: 10px 0;
+}
+
+.post-content strong {
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #dbdbdb;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
